@@ -1,0 +1,51 @@
+{
+  "name": "rc-time-duration-picker",
+  "version": "1.0.1",
+  "description": "Select time with Month, Day, Date, Time",
+  "repository": "none",
+  "author": "TuDHM disciple of HieuBQ",
+  "license": "MIT",
+  "files": [
+    "lib",
+    "es",
+    "styles/*.css"
+  ],
+  "main": "lib/index",
+  "module": "es/index",
+  "config": {
+    "port": 3000
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "classnames": "^2.2.5",
+    "immutable": "^3.8.1",
+    "moment": "^2.18.1",
+    "prop-types": "^15.5.10",
+    "rc-trigger": "^1.10.4"
+  },
+  "scripts": {
+    "build": "rc-tools run build",
+    "gh-pages": "rc-tools run gh-pages",
+    "start": "rc-tools run server",
+    "compile": "rc-tools run compile --babel-runtime",
+    "pub": "rc-tools run pub --babel-runtime",
+    "lint": "rc-tools run lint",
+    "karma": "rc-test run karma",
+    "saucelabs": "rc-test run saucelabs",
+    "test": "rc-test run test",
+    "chrome-test": "rc-test run chrome-test",
+    "coverage": "rc-test run coverage"
+  },
+  "devDependencies": {
+    "async": "^2.4.1",
+    "bootstrap": "^3.3.7",
+    "expect.js": "^0.3.1",
+    "jquery": "^3.2.1",
+    "pre-commit": "^1.2.2",
+    "rc-test": "^6.0.1",
+    "rc-tools": "^6.2.2",
+    "rc-util": "^4.0.4",
+    "react": "15.4.1",
+    "react-dom": "15.4.1"
+  }
+}
