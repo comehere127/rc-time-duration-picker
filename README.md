@@ -16,5 +16,8 @@ import TimeDurationPicker from 'rc-time-duration-picker';
 
 ReactDOM.render(< TimeDurationPicker />, container);
 
+## DEMO
+http://localhost:3000/examples/demo.html
+
 ## AUTHOR
 TuDHM-VNG
