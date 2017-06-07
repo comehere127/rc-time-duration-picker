@@ -1,1 +1,1 @@
-export { default } from './TimeDuationPicker';
+export { default } from './TimeDurationPicker';

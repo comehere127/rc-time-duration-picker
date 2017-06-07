@@ -1,7 +1,8 @@
+import 'rc-time-duration-picker/styles/index.less';
 import React from 'react';
 import ReactDom from 'react-dom';
 import moment from 'moment';
-import TimeDuationPicker from 'rc-time-duration-picker';
+import TimeDurationPicker from 'rc-time-duration-picker';
 
 class App extends React.Component {
   handleChange = (value) => {
@@ -10,10 +11,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <TimeDuationPicker defaultValue={moment()} onChange={this.handleChange} />
-        <TimeDuationPicker defaultValue={moment()} showWeekDay onChange={this.handleChange} />
-        <TimeDuationPicker defaultValue={moment()} showMonthDay onChange={this.handleChange} />
-        <TimeDuationPicker defaultValue={moment()} showMonth showMonthDay onChange={this.handleChange} />
+        <TimeDurationPicker defaultValue={moment()} onChange={this.handleChange} />
+        <TimeDurationPicker defaultValue={moment()} showWeekDay onChange={this.handleChange} />
+        <TimeDurationPicker defaultValue={moment()} showMonthDay onChange={this.handleChange} />
+        <TimeDurationPicker defaultValue={moment()} showMonth showMonthDay onChange={this.handleChange} />
       </div>
     );
   }

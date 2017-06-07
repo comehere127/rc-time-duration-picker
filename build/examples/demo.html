@@ -273,7 +273,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
       <pre><code language="js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 <span class="hljs-keyword">import</span> ReactDom <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
 <span class="hljs-keyword">import</span> moment <span class="hljs-keyword">from</span> <span class="hljs-string">'moment'</span>;
-<span class="hljs-keyword">import</span> TimeDuationPicker <span class="hljs-keyword">from</span> <span class="hljs-string">'rc-time-duration-picker'</span>;
+<span class="hljs-keyword">import</span> TimeDurationPicker <span class="hljs-keyword">from</span> <span class="hljs-string">'rc-time-duration-picker'</span>;
 
 <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">App</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">React</span>.<span class="hljs-title">Component</span> </span>{
   handleChange = (value) =&gt; {
@@ -282,10 +282,10 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
   render() {
     <span class="hljs-keyword">return</span> (
       <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-title">div</span>&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TimeDuationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TimeDuationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">showWeekDay</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TimeDuationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">showMonthDay</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
-        <span class="hljs-tag">&lt;<span class="hljs-title">TimeDuationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">showMonth</span> <span class="hljs-attribute">showMonthDay</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TimeDurationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TimeDurationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">showWeekDay</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TimeDurationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">showMonthDay</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">TimeDurationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">showMonth</span> <span class="hljs-attribute">showMonthDay</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     )</span>;
   }
