@@ -11,8 +11,7 @@ yarn add rc-time-duration-picker
 ## USAGE
 import TimeDurationPicker from 'rc-time-duration-picker';
 
-ReactDOM.render(<TimeDurationPicker />, container);
-
+ReactDOM.render('<'TimeDurationPicker />, container);
 
 ## AUTHOR
 TuDHM-VNG
