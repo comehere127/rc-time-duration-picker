@@ -25,15 +25,9 @@
   },
   "scripts": {
     "build": "rc-tools run build",
-    "gh-pages": "rc-tools run gh-pages",
     "start": "rc-tools run server",
-    "compile": "rc-tools run compile --babel-runtime",
-    "pub": "rc-tools run pub --babel-runtime",
     "lint": "rc-tools run lint",
     "karma": "rc-test run karma",
-    "saucelabs": "rc-test run saucelabs",
-    "test": "rc-test run test",
-    "chrome-test": "rc-test run chrome-test",
     "coverage": "rc-test run coverage"
   },
   "devDependencies": {
