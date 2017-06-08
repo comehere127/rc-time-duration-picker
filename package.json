@@ -1,8 +1,8 @@
 {
   "name": "rc-time-duration-picker",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Select time with Month, Day, Date, Time",
-  "repository": "none",
+  "repository": "https://github.com/comehere127/rc-time-duration-picker",
   "author": "TuDHM disciple of HieuBQ",
   "license": "MIT",
   "files": [
