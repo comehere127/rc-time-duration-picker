@@ -16,6 +16,7 @@ class App extends React.Component {
         <p> <b>Select time of week day </b> <TimeDurationPicker defaultValue={moment()} showWeekDay onChange={this.handleChange} /></p>
         <p> <b>Select time of month day </b> <TimeDurationPicker defaultValue={moment()} showMonthDay onChange={this.handleChange} /></p>
         <p> <b>Select time of month, month day </b> <TimeDurationPicker defaultValue={moment()} showMonth showMonthDay onChange={this.handleChange} /></p>
+        <p> <b>Using locale, supporting for Vietnamese and English </b> <TimeDurationPicker defaultValue={moment()} showMonth showMonthDay onChange={this.handleChange} locale={'vi'} /></p>
       </div>
     );
   }

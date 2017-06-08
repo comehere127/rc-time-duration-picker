@@ -62,10 +62,11 @@ class Combobox extends React.Component {
 
         onCurrentSelectPanelChange: PropTypes.func,
         use12Hours: PropTypes.bool,
+        locale: PropTypes.string,
     };
 
     onItemChange = (type, itemValue) => {
-        const { onChange, defaultOpenValue, use12Hours } = this.props;
+        const { onChange, defaultOpenValue, use12Hours, locale } = this.props;
         const value = (this.props.value || defaultOpenValue).clone();
         if (type === 'hour') {
             if (use12Hours) {
@@ -93,11 +94,11 @@ class Combobox extends React.Component {
                 }
             }
         } else if (type === 'weekday') {
-            value.day(GetDayOfWeek('vi').findIndex(x => x === itemValue));
+            value.day(GetDayOfWeek(locale).findIndex(x => x === itemValue));
         } else if (type === 'monthday') {
             value.date(ConvertStringToInt(itemValue));
         } else if (type === 'month') {
-            value.month(GetMonthOfYear('vi').findIndex(x => x === itemValue));
+            value.month(GetMonthOfYear(locale).findIndex(x => x === itemValue));
         }
         onChange(value);
     }

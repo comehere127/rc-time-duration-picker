@@ -55,6 +55,7 @@ export default class Picker extends Component {
         name: PropTypes.string,
         autoComplete: PropTypes.string,
         use12Hours: PropTypes.bool,
+        locale: PropTypes.string,
     };
 
     static defaultProps = {
@@ -87,6 +88,7 @@ export default class Picker extends Component {
         onClose: noop,
         addon: noop,
         use12Hours: false,
+        locale: 'en',
     };
 
     constructor(props) {
@@ -171,7 +173,7 @@ export default class Picker extends Component {
       prefixCls, placeholder, disabledHours, disabledWeekDays, disabledMonthDays, disabledMonths, disabledMinutes,
             hideDisabledOptions, allowEmpty,
             showHour, showMinute, showWeekDay, showMonthDay, showMonth,
-            defaultOpenValue, clearText, addon, use12Hours,
+            defaultOpenValue, clearText, addon, use12Hours, locale,
     } = this.props;
         return (
             <Panel
@@ -203,6 +205,7 @@ export default class Picker extends Component {
                 hideDisabledOptions={hideDisabledOptions}
                 use12Hours={use12Hours}
                 addon={addon}
+                locale={locale}
             />
         );
     }
@@ -252,13 +255,13 @@ export default class Picker extends Component {
         let dataR = '';
         if (data) {
             if (this.props.showMonth) {
-                dataR += GetMonthOfYear('vi').get(data.month()) + ', ';
+                dataR += GetMonthOfYear(this.props.locale).get(data.month()) + ', ';
             }
             if (this.props.showMonthDay) {
-                dataR += GetPrefixDay('vi', data.date()) + ', ';
+                dataR += GetPrefixDay(this.props.locale, data.date()) + ', ';
             }
             if (this.props.showWeekDay) {
-                dataR += GetDayOfWeek('vi').get(data.weekday()) + ', ';
+                dataR += GetDayOfWeek(this.props.locale).get(data.weekday()) + ', ';
             }
             dataR += data.format(format);
         }

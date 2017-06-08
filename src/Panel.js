@@ -9,38 +9,6 @@ import { GetDayOfWeek, GetMonthOfYear, GetPrefixDay } from './Constant';
 function noop() {
 }
 
-function generateOptions(length, disabledOptions, hideDisabledOptions) {
-    const arr = [];
-    for (let value = 0; value < length; value++) {
-        if (!disabledOptions || disabledOptions.indexOf(value) < 0 || !hideDisabledOptions) {
-            arr.push(value);
-        }
-    }
-    return arr;
-}
-
-function generateDaysOfMonthOptions(length, disabledOptions, hideDisabledOptions) {
-    const arr = [];
-    for (let value = 0; value < length; value++) {
-        if (!disabledOptions || disabledOptions.indexOf(value) < 0 || !hideDisabledOptions) {
-            arr.push(GetPrefixDay('vi', value + 1));
-        }
-    }
-    return arr;
-}
-
-function generateOptionsString(Options, disabledOptions, hideDisabledOptions) {
-    const arr = [];
-    for (let value = 0; value < Options.length; value++) {
-        if (!disabledOptions || disabledOptions.indexOf(Options[value]) < 0 || !hideDisabledOptions) {
-            arr.push(Options[value]);
-        }
-    }
-    return arr;
-}
-
-
-
 class Panel extends Component {
     static propTypes = {
         clearText: PropTypes.string,
@@ -71,6 +39,7 @@ class Panel extends Component {
         onClear: PropTypes.func,
         use12Hours: PropTypes.bool,
         addon: PropTypes.func,
+        locale: PropTypes.string,
     };
 
     static defaultProps = {
@@ -87,6 +56,7 @@ class Panel extends Component {
         defaultOpenValue: moment(),
         use12Hours: false,
         addon: noop,
+        locale: 'en',
     };
 
     constructor(props) {
@@ -119,24 +89,53 @@ class Panel extends Component {
     close() {
         this.props.onEsc();
     }
+    generateOptions = (length, disabledOptions, hideDisabledOptions) => {
+        const arr = [];
+        for (let value = 0; value < length; value++) {
+            if (!disabledOptions || disabledOptions.indexOf(value) < 0 || !hideDisabledOptions) {
+                arr.push(value);
+            }
+        }
+        return arr;
+    }
 
+    generateDaysOfMonthOptions = (length, disabledOptions, hideDisabledOptions) => {
+        const arr = [];
+        for (let value = 0; value < length; value++) {
+            if (!disabledOptions || disabledOptions.indexOf(value) < 0 || !hideDisabledOptions) {
+                arr.push(GetPrefixDay(this.props.locale, value + 1));
+            }
+        }
+        return arr;
+    }
+
+    generateOptionsString = (Options, disabledOptions, hideDisabledOptions) => {
+        const arr = [];
+        for (let value = 0; value < Options.length; value++) {
+            if (!disabledOptions || disabledOptions.indexOf(Options[value]) < 0 || !hideDisabledOptions) {
+                arr.push(Options[value]);
+            }
+        }
+        return arr;
+    }
     render() {
         const {
             prefixCls, className, placeholder, disabledHours, disabledMinutes, disabledWeekDays, disabledMonthDays, disabledMonths,
             hideDisabledOptions, allowEmpty, showHour, showMinute, showWeekDay, showMonthDay, showMonth,
-            format, defaultOpenValue, clearText, onEsc, addon, use12Hours, onClear,
+            format, defaultOpenValue, clearText, onEsc, addon, use12Hours, onClear, locale,
         } = this.props;
+        console.log(locale);
         const { value, currentSelectPanel } = this.state;
         const disabledHourOptions = disabledHours();
         const disabledMinuteOptions = disabledMinutes(value ? value.hour() : null);
         const disabledWeekDayOptions = disabledWeekDays();
         const disabledMonthDayOptions = disabledMonthDays();
         const disabledMonthOptions = disabledMonths();
-        const hourOptions = generateOptions(24, disabledHourOptions, hideDisabledOptions);
-        const minuteOptions = generateOptions(60, disabledMinuteOptions, hideDisabledOptions);
-        const weekDayOptions = generateOptionsString(GetDayOfWeek('vi').toArray(), disabledWeekDayOptions, hideDisabledOptions);
-        const monthDayOptions = generateDaysOfMonthOptions(value.daysInMonth(), disabledMonthDayOptions, hideDisabledOptions);
-        const monthOptions = generateOptionsString(GetMonthOfYear('vi').toArray(), disabledMonthOptions, hideDisabledOptions);
+        const hourOptions = this.generateOptions(24, disabledHourOptions, hideDisabledOptions);
+        const minuteOptions = this.generateOptions(60, disabledMinuteOptions, hideDisabledOptions);
+        const weekDayOptions = this.generateOptionsString(GetDayOfWeek(locale).toArray(), disabledWeekDayOptions, hideDisabledOptions);
+        const monthDayOptions = this.generateDaysOfMonthOptions(value.daysInMonth(), disabledMonthDayOptions, hideDisabledOptions);
+        const monthOptions = this.generateOptionsString(GetMonthOfYear(locale).toArray(), disabledMonthOptions, hideDisabledOptions);
         return (
             <div className={classNames({ [`${prefixCls}-inner`]: true, [className]: !!className })}>
                 <Header
@@ -168,6 +167,7 @@ class Panel extends Component {
                     onChange={this.onChange}
                     onClear={onClear}
                     allowEmpty={allowEmpty}
+                    locale={locale}
                 />
                 <Combobox
                     prefixCls={prefixCls}
@@ -196,6 +196,7 @@ class Panel extends Component {
 
                     onCurrentSelectPanelChange={this.onCurrentSelectPanelChange}
                     use12Hours={use12Hours}
+                    locale={locale}
                 />
                 {addon(this)}
             </div>

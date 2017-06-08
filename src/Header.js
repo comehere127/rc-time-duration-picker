@@ -33,6 +33,7 @@ class Header extends React.Component {
         allowEmpty: PropTypes.bool,
         defaultOpenValue: PropTypes.object,
         currentSelectPanel: PropTypes.string,
+        locale: PropTypes.string,
     };
 
     constructor(props) {
@@ -55,13 +56,13 @@ class Header extends React.Component {
         let dataR = '';
         if (data) {
             if (this.props.showMonth) {
-                dataR += GetMonthOfYear('vi').get(data.month()) + ', ';
+                dataR += GetMonthOfYear(this.props.locale).get(data.month()) + ', ';
             }
             if (this.props.showMonthDay) {
-                dataR += GetPrefixDay('vi', data.date()) + ', ';
+                dataR += GetPrefixDay(this.props.locale, data.date()) + ', ';
             }
             if (this.props.showWeekDay) {
-                dataR += GetDayOfWeek('vi').get(data.weekday()) + ', ';
+                dataR += GetDayOfWeek(this.props.locale).get(data.weekday()) + ', ';
             }
             dataR += data.format(format);
         }
