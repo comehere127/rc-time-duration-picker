@@ -17,6 +17,8 @@ import TimeDurationPicker from 'rc-time-duration-picker';
 ReactDOM.render(< TimeDurationPicker />, container);
 
 ## DEMO
+yarn start
+
 http://localhost:3000/examples/demo.html
 
 ## AUTHOR
