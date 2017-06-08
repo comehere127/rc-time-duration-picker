@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import moment from 'moment';
+import 'rc-time-duration-picker/index.less';
 import TimeDurationPicker from 'rc-time-duration-picker';
 
 class App extends React.Component {
