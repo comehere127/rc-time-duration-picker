@@ -1,6 +1,6 @@
 {
   "name": "rc-time-duration-picker",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Select time with Month, Day, Date, Time",
   "repository": "https://github.com/comehere127/rc-time-duration-picker",
   "author": "TuDHM disciple of HieuBQ",
@@ -26,10 +26,15 @@
   "scripts": {
     "build": "rc-tools run build",
     "start": "rc-tools run server",
+    "compile": "rc-tools run compile --babel-runtime",
+    "pub": "rc-tools run pub --babel-runtime",
     "lint": "rc-tools run lint",
     "karma": "rc-test run karma",
     "coverage": "rc-test run coverage"
   },
+  "pre-commit": [
+    "lint"
+  ],
   "devDependencies": {
     "async": "^2.4.1",
     "bootstrap": "^3.3.7",
