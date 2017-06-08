@@ -1,4 +1,3 @@
-import 'rc-time-duration-picker/styles/index.less';
 import React from 'react';
 import ReactDom from 'react-dom';
 import moment from 'moment';

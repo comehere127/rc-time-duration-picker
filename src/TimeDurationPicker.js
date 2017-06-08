@@ -4,6 +4,7 @@ import Trigger from 'rc-trigger';
 import Panel from './Panel';
 import placements from './placements';
 import moment from 'moment';
+import 'rc-time-duration-picker/styles/index.less';
 import { GetDayOfWeek, GetMonthOfYear, GetPrefixDay } from './Constant';
 
 function noop() {

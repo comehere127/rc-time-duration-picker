@@ -20591,15 +20591,13 @@ module.exports = ReactPropTypesSecret;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rc_time_duration_picker_styles_index_less__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_rc_time_duration_picker_styles_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_rc_time_duration_picker_styles_index_less__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dom__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_dom__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rc_time_duration_picker__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(7);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_moment__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rc_time_duration_picker__ = __webpack_require__(143);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -20607,7 +20605,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
 
 
 
@@ -20636,77 +20633,89 @@ var App = function (_React$Component) {
   _createClass(App, [{
     key: 'render',
     value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+      return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
         'div',
         null,
-        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
           ' ',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'b',
             null,
             'Only select time 24h '
           ),
           ' ',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_3_moment___default()(), onChange: this.handleChange })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_2_moment___default()(), onChange: this.handleChange })
         ),
-        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
           ' ',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'b',
             null,
             'Only select time 12h '
           ),
           ' ',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_3_moment___default()(), onChange: this.handleChange, use12Hours: true })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_2_moment___default()(), onChange: this.handleChange, use12Hours: true })
         ),
-        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
           ' ',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'b',
             null,
             'Select time of week day '
           ),
           ' ',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_3_moment___default()(), showWeekDay: true, onChange: this.handleChange })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_2_moment___default()(), showWeekDay: true, onChange: this.handleChange })
         ),
-        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
           ' ',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'b',
             null,
             'Select time of month day '
           ),
           ' ',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_3_moment___default()(), showMonthDay: true, onChange: this.handleChange })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_2_moment___default()(), showMonthDay: true, onChange: this.handleChange })
         ),
-        __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
           'p',
           null,
           ' ',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
             'b',
             null,
             'Select time of month, month day '
           ),
           ' ',
-          __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_3_moment___default()(), showMonth: true, showMonthDay: true, onChange: this.handleChange })
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_2_moment___default()(), showMonth: true, showMonthDay: true, onChange: this.handleChange })
+        ),
+        __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+          'p',
+          null,
+          ' ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
+            'b',
+            null,
+            'Using locale, supporting for Vietnamese and English '
+          ),
+          ' ',
+          __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3_rc_time_duration_picker__["a" /* default */], { defaultValue: __WEBPACK_IMPORTED_MODULE_2_moment___default()(), showMonth: true, showMonthDay: true, onChange: this.handleChange, locale: 'vi' })
         )
       );
     }
   }]);
 
   return App;
-}(__WEBPACK_IMPORTED_MODULE_1_react___default.a.Component);
+}(__WEBPACK_IMPORTED_MODULE_0_react___default.a.Component);
 
-__WEBPACK_IMPORTED_MODULE_2_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(App, null), document.getElementById('__react-content'));
+__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(App, null), document.getElementById('__react-content'));
 
 /***/ }),
 /* 140 */
@@ -21463,7 +21472,7 @@ Combobox.propTypes = {
 
     onCurrentSelectPanelChange: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.func,
     use12Hours: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
-    locale: PropertyTypes.string
+    locale: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string
 };
 
 
@@ -21613,7 +21622,7 @@ Header.propTypes = {
     allowEmpty: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.bool,
     defaultOpenValue: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.object,
     currentSelectPanel: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string,
-    locale: PropertyTypes.string
+    locale: __WEBPACK_IMPORTED_MODULE_1_prop_types___default.a.string
 };
 
 var _initialiseProps = function _initialiseProps() {
@@ -21857,6 +21866,8 @@ var Panel = function (_Component) {
                 use12Hours = _props.use12Hours,
                 onClear = _props.onClear,
                 locale = _props.locale;
+
+            console.log(locale);
             var _state = this.state,
                 value = _state.value,
                 currentSelectPanel = _state.currentSelectPanel;
@@ -21868,9 +21879,9 @@ var Panel = function (_Component) {
             var disabledMonthOptions = disabledMonths();
             var hourOptions = this.generateOptions(24, disabledHourOptions, hideDisabledOptions);
             var minuteOptions = this.generateOptions(60, disabledMinuteOptions, hideDisabledOptions);
-            var weekDayOptions = this.generateOptionsString(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__Constant__["c" /* GetDayOfWeek */])(this.props.locale).toArray(), disabledWeekDayOptions, hideDisabledOptions);
+            var weekDayOptions = this.generateOptionsString(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__Constant__["c" /* GetDayOfWeek */])(locale).toArray(), disabledWeekDayOptions, hideDisabledOptions);
             var monthDayOptions = this.generateDaysOfMonthOptions(value.daysInMonth(), disabledMonthDayOptions, hideDisabledOptions);
-            var monthOptions = this.generateOptionsString(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__Constant__["a" /* GetMonthOfYear */])(this.props.locale).toArray(), disabledMonthOptions, hideDisabledOptions);
+            var monthOptions = this.generateOptionsString(__webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__Constant__["a" /* GetMonthOfYear */])(locale).toArray(), disabledMonthOptions, hideDisabledOptions);
             return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(
                 'div',
                 { className: __WEBPACK_IMPORTED_MODULE_5_classnames___default()((_classNames = {}, _defineProperty(_classNames, prefixCls + '-inner', true), _defineProperty(_classNames, className, !!className), _classNames)) },
@@ -22190,7 +22201,9 @@ Select.propTypes = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__placements__ = __webpack_require__(150);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_moment___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_moment__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__Constant__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rc_time_duration_picker_styles_index_less__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rc_time_duration_picker_styles_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_rc_time_duration_picker_styles_index_less__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__Constant__ = __webpack_require__(43);
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22198,6 +22211,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 
 
 
@@ -22568,13 +22582,13 @@ var _initialiseProps = function _initialiseProps() {
         var dataR = '';
         if (data) {
             if (_this2.props.showMonth) {
-                dataR += __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__Constant__["a" /* GetMonthOfYear */])(_this2.props.locale).get(data.month()) + ', ';
+                dataR += __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__Constant__["a" /* GetMonthOfYear */])(_this2.props.locale).get(data.month()) + ', ';
             }
             if (_this2.props.showMonthDay) {
-                dataR += __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__Constant__["b" /* GetPrefixDay */])(_this2.props.locale, data.date()) + ', ';
+                dataR += __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__Constant__["b" /* GetPrefixDay */])(_this2.props.locale, data.date()) + ', ';
             }
             if (_this2.props.showWeekDay) {
-                dataR += __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_6__Constant__["c" /* GetDayOfWeek */])(_this2.props.locale).get(data.weekday()) + ', ';
+                dataR += __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_7__Constant__["c" /* GetDayOfWeek */])(_this2.props.locale).get(data.weekday()) + ', ';
             }
             dataR += data.format(format);
         }

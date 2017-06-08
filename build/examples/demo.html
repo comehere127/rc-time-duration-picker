@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>demo.js - example - rc-time-duration-picker@1.0.4</title>
+  <title>demo.js - example - rc-time-duration-picker@1.0.6</title>
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta charset="utf-8"/>
@@ -263,14 +263,13 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
 <body>
   <div class="container">
     <div class="header">
-      <h1>rc-time-duration-picker@1.0.4</h1>
+      <h1>rc-time-duration-picker@1.0.6</h1>
 
       <p>Select time with Month, Day, Date, Time</p>
     </div>
     <div class="example" id="__react-content"></div>
 
-    <div class="highlight"><pre><code language="js"><span class="hljs-keyword">import</span> <span class="hljs-string">'rc-time-duration-picker/styles/index.less'</span>;
-<span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+    <div class="highlight"><pre><code language="js"><span class="hljs-keyword">import</span> React <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
 <span class="hljs-keyword">import</span> ReactDom <span class="hljs-keyword">from</span> <span class="hljs-string">'react-dom'</span>;
 <span class="hljs-keyword">import</span> moment <span class="hljs-keyword">from</span> <span class="hljs-string">'moment'</span>;
 <span class="hljs-keyword">import</span> TimeDurationPicker <span class="hljs-keyword">from</span> <span class="hljs-string">'rc-time-duration-picker'</span>;
@@ -287,6 +286,7 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
         <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>Select time of week day <span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">TimeDurationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">showWeekDay</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>Select time of month day <span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">TimeDurationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">showMonthDay</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
         <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>Select time of month, month day <span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">TimeDurationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">showMonth</span> <span class="hljs-attribute">showMonthDay</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">p</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">b</span>&gt;</span>Using locale, supporting for Vietnamese and English <span class="hljs-tag">&lt;/<span class="hljs-title">b</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">TimeDurationPicker</span> <span class="hljs-attribute">defaultValue</span>=<span class="hljs-value">{moment()}</span> <span class="hljs-attribute">showMonth</span> <span class="hljs-attribute">showMonthDay</span> <span class="hljs-attribute">onChange</span>=<span class="hljs-value">{this.handleChange}</span> <span class="hljs-attribute">locale</span>=<span class="hljs-value">{'vi'}</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">p</span>&gt;</span>
       <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
     )</span>;
   }
